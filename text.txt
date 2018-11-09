@@ -1,0 +1,1 @@
+this is the content of the file text.txtnt in DUP.c purpose of the lseek
