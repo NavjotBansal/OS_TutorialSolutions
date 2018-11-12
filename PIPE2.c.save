@@ -1,0 +1,15 @@
+{ pid_t pid;
+int mypipefd[2];
+int ret; char buf[20];
+ret = pipe(mypipefd);
+if(ret == -1)
+printf(“Error creation in Pipe\n”);
+pid = fork();
+if (pid == 0){
+/*Child Process*/
+write(mypipefd[1], “OS Unix Tut”, 11);}
+else{
+read(mypipefd[0], buf, 15);
+printf(“buf: %s\n”, buf);
+return 0;
+}

@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <unistd.h>
+
+#define SIZE 16
+char* msg1 = "hello, world #1";
+char* msg2 = "hello, world #2";
+char* msg3 = "hello, world #3";
+
+int main()
+{
+char inbuf[SIZE];
+int p[2],i;
+if(pipe(p)<0)
+exit(1);
+write(p[1],msg1,SIZE);write(p[1],msg1,SIZE);
